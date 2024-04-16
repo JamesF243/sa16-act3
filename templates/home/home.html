@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Home</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}"> <!-- Assuming you have a separate CSS file for styles -->
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to James Finkelstein's Portfolio</h1>
+        </div>
+    </section>
+
+    <section class="cards">
+        <div class="container">
+            <div class="card">
+                <a href="{% url 'about' %}">
+                    <h2>About Me</h2>
+                </a>
+            </div>
+            <div class="card">
+                <a href="{% url 'work' %}">
+                    <h2>My Work</h2>
+                </a>
+            </div>
+            <div class="card">
+                <a href="{% url 'contact' %}">
+                    <h2>Contact Me</h2>
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+</body>
+</html>
